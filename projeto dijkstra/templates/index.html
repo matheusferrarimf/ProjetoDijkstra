@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menor Caminho</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Menor Caminho</h1>
+        <form id="form-caminho" method="POST">
+            <label for="cidade1">Cidade de partida:</label>
+            <input type="text" id="cidade1" name="cidade1" required>
+            <br><br>
+            <label for="cidade2">Cidade de destino:</label>
+            <input type="text" id="cidade2" name="cidade2" required>
+            <br><br>
+            <button type="submit">Calcular</button>
+        </form>
+
+        {% if resultado %}
+        <h2>Resultado:</h2>
+        <p>{{ resultado }}</p>
+        {% endif %}
+    </div>
+
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
