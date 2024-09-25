@@ -1,3 +1,4 @@
+#Importando libraries
 from flask import Flask, render_template, request
 from heapq import heapify, heappop, heappush
 
@@ -78,8 +79,6 @@ class Graph:
 
         return path
 
-G = Graph(graph)
-
 # Rota principal
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -97,3 +96,5 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
