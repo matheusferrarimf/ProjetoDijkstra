@@ -11,3 +11,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+document.getElementById('mostrar-grafo').addEventListener('click', function() {
+    var grafoContainer = document.getElementById('grafo-container');
+    if (grafoContainer.style.display === 'none') {
+        grafoContainer.style.display = 'block';
+    } else {
+        grafoContainer.style.display = 'none';
+    }
+});

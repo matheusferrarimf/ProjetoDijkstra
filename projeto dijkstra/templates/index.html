@@ -18,13 +18,22 @@
             <br><br>
             <button type="submit">Calcular</button>
         </form>
-
+        
         {% if resultado %}
         <h2>Resultado:</h2>
         <p>{{ resultado }}</p>
         {% endif %}
-    </div>
+        <button id="mostrar-grafo">Mostrar Grafo</button>
 
+        
+        
+    </div>
+    
+
+        
+    <div id="grafo-container" style="display:none;">
+        <img src="/static/imagem.png" alt="Grafo de Cidades" id="grafo-img">
+    </div>
     
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
